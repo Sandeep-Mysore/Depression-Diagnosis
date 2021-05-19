@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UPMC - Health Screening App</title>
+
+    <!-- meta tags for SEO and social sharing -->
+    <meta name="description" content="A health screening app, for UPMC." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="UPMC - HSA" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own." />
+    <meta property="og:image" content="/Users/sandeepmysore/.bitnami/stackman/machines/xampp/volumes/root/htdocs/ISD_Project/Code/assets/UPMC_LOGO.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body style="background-color: #660066;">
+      <script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+function pwdStrength(password){
+var desc = new Array();
+desc[0] = "Very Weak";
+desc[1] = "Weak";
+desc[2] = "Better";
+desc[3] = "Medium";
+desc[4] = "Strong";
+desc[5] = "Strongest";
+var score   = 0;
+//if password bigger than 6 give 1 point
+if (password.length > 6) score++;
+//if password has both lower and uppercase characters give 1 point
+if ( ( password.match(/[a-z]/) ) && ( password.match(/[A-Z]/) ) ) score++;
+//if password has at least one number give 1 point
+if (password.match(/\d+/)) score++;
+//if password has at least one special caracther give 1 point
+if ( password.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/) ) score++;
+//if password bigger than 12 give another 1 point
+if (password.length > 12) score++;
+document.getElementById("pwdDescription").innerHTML = desc[score];
+document.getElementById("pwdStrength").className = "strength" + score;
+}
+function Validate() {
+       var password = document.getElementById("password").value;
+       var confirmPassword = document.getElementById("confirm_password").value;
+       if (password != confirmPassword) {
+           alert("Passwords do not match.");
+           return false;
+       }
+       return true;
+   }
+</script>
+
+      <div class="jumbotron text-white" id="header" style="padding:0;">
+          <div class="row" id="logo">
+              <div class="col" style="padding:0;margin:0;">
+                  <img src="assets/UPMC_LOGO.png" width="300" height="80" alt="UPMC">
+              </div>
+              <div class="col">
+                  <div class="page-header title">
+                      <h1>Health Check Application</h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+<div id="content">
+<form action="save_profile.php" class="needs-validation" role="form" id="signup_form" name="signup_form" method = "POST" novalidate>
+   <div class="form-group">
+     <label for="firstname"><b>First Name:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="firstname" placeholder="Enter First Name" name="firstname" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="lastname"><b>Last Name:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="lastname" placeholder="Enter Last Name" name="lastname" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="email"><b>Email:</b></label>
+     <input type="email" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="email" placeholder="Enter Email" name="email" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="password"><b>Password:</b></label>
+     <input type="password" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="password" placeholder="Enter Password" name="password" onKeyUp="pwdStrength(this.value)" required>
+     <div id="pwdDescription" style="color:red;">Password Strength:</div>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="confirm_password"><b>Confirm Password:</b></label>
+     <input type="password" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="confirm_password" placeholder="Enter Password Again" name="confirm_password" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <button type="submit" class="btn btn-primary" value="sign-up" name="submit" onclick="return Validate()">Submit</button>
+ </form>
+
+</div>
+
+
+  </body>
+</html>

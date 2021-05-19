@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UPMC - Health Screening App</title>
+
+    <!-- meta tags for SEO and social sharing -->
+    <meta name="description" content="A health screening app, for UPMC." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="UPMC - HSA" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own." />
+    <meta property="og:image" content="/Users/sandeepmysore/.bitnami/stackman/machines/xampp/volumes/root/htdocs/ISD_Project/Code/assets/UPMC_LOGO.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body style="background-color: #660066;">
+      <script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+      <div class="jumbotron text-white" id="header" style="padding:0;">
+          <div class="row" id="logo">
+              <div class="col" style="padding:0;margin:0;">
+                  <img src="assets/UPMC_LOGO.png" width="300" height="80" alt="UPMC">
+              </div>
+              <div class="col">
+                  <div class="page-header title">
+                      <h1><b>Health Check Application</b></h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+<div id="content">
+      <form action="create_qs.php" class="needs-validation" method="POST" novalidate>
+   <div class="form-group">
+     <label for="question"><b>Question:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="question" placeholder="Enter Question" name="question" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="option_a"><b>Option-A:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="option_a" placeholder="Enter Option A" name="option_a" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="option_b"><b>Option-B:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="option_b" placeholder="Enter Option B" name="option_b" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="option_c"><b>Option-C:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="option_c" placeholder="Enter Option C" name="option_c" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+   <div class="form-group">
+     <label for="option_d"><b>Option-D:</b></label>
+     <input type="text" class="form-control" style="width:60%;margin-left:20%;margin-right:20%;text-align:center;vertical-align:center;border:2px solid #660066;" id="option_d" placeholder="Enter Option D" name="option_d" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Please fill out this field.</div>
+   </div>
+
+   <button type="submit" class="btn btn-primary" value="login" name="submit" onclick="">Submit</button>
+ </form>
+</div>
+</body>
+</html>

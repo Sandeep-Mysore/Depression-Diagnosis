@@ -1,0 +1,121 @@
+html {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container{
+    background-color: #808080;
+    margin: 0px;
+    width: 100%;
+}
+body{
+    padding: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+#div1, #div2{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+#cat1, #cat2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#div1:hover, #div2:hover{
+    background-color: #000000;
+}
+
+.jumbotron{
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top:0;
+    padding-bottom:0;
+    margin-left: 4%;
+    margin-right: 4%;
+    border-radius: 0;
+    padding: 0;
+    background: gray;
+}
+
+#content{
+    text-align: center;
+    padding:0;
+    margin-left:4%;
+    margin-right:4%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    background-color: #E9ECEF;
+}
+.row {
+    padding: 0;
+    margin: 0;
+}
+#header{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.col{
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    padding-left: 0;
+    margin-left: 0;
+}
+.page-header{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: center;
+}
+
+.title{
+    padding: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  padding-left: 20%;
+  border:2px;
+  border-color: solid #660066;
+}
+
+input:active,input:focus {
+    border: 2px solid #red;
+}
+
+
+h1,h2{
+    color: #660066;
+}
+
+#table_row{
+    text-align: center;
+    vertical-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+table.td,table,table.tr{
+    padding: 5%;
+    margin: 5%;
+}
+#radio_btn{
+    text-align: center;
+}
