@@ -1,7 +1,6 @@
 UPMC Health Screening Application - 
 
 Domain: Full Stack Web Application
-Client: Dr. Jeniffer Steel, UPMC Hospital
 
 Technologies & Concept: LAMP, Stack, ISD (Interactive System Design), PHP, HTML5, CSS3, Bootstrap4, JavaScript, MySQL, Design, Bitnami, Wireframe, PhpMyAdmin, Google Compute Engine, Google Cloud, GCP (Google Cloud Platform)
 The project was to build a Health Screening Application to diagnose depression in patients. This is a full stack web application built on Lamp Stack and hosted on the Google Cloud Platform.
